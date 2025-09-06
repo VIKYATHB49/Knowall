@@ -1,0 +1,197 @@
+    .practice-container {
+      padding: 2rem;
+      box-sizing: border-box;
+      min-height: 100vh; /* Ensures the container takes at least the full viewport height */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+/* Creative Heading */
+.practice-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #111; /* Fallback color for browsers that don't support background-clip */
+  position: relative;
+  display: inline-block;
+  padding: 0.3em 0.8em;
+
+  /* Gradient setup */
+  background: linear-gradient(90deg, #ff8c00, #ff3c78, #6c63ff);
+  background-size: 200% 200%; /* Makes the gradient larger for a smoother animation */
+  
+  /* Standard property first */
+  background-clip: text;
+  
+  /* Prefixed version for WebKit browsers (Safari, Chrome) */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Animation */
+  animation: gradient-move 3s infinite alternate;
+}
+
+/* Animated gradient effect */
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Add a subtle underline effect */
+.practice-heading::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 60%;
+  margin: 8px auto 0;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #ff8c00, #ff3c78, #6c63ff);
+}
+    /* Filters section */
+    .practice-container .filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+      flex-shrink: 0; /* Prevents filters from shrinking */
+    }
+
+    .practice-container .filter-btn {
+      cursor: pointer;
+      height: 35px;
+      border-radius: 6px;
+      border: 1px solid #000;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0 15px;
+      background: #fff;
+      color: #000;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .practice-container .filter-btn.active {
+      background: #000;
+      color: #fff;
+    }
+
+    /* Grid for holding the practice cards */
+    .practice-container .practice-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 250px);
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+      max-width: 1100px; /* Max width for larger screens */
+      box-sizing: border-box;
+      padding: 0 1rem;
+      /* The flex-grow property is removed to prevent the grid from stretching vertically */
+    }
+
+    /* Individual practice card styling */
+    .practice-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background-color: #fff;
+      animation: fadeIn 0.8s ease-in-out;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex; /* Use flexbox for consistent height */
+    }
+
+    .practice-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /* Inner content of the card */
+    .practice-card-content {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .practice-card-content .card-type {
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: #555;
+      background-color: #f0f0f0;
+      padding: 3px 8px;
+      border-radius: 12px;
+      align-self: flex-start;
+      text-transform: uppercase;
+    }
+
+    .practice-card-content h3 {
+      margin: 1rem 0;
+      font-size: 1rem;
+      flex-grow: 1;
+    }
+
+    .practice-card-content .practice-btn {
+      cursor: pointer;
+      color: #000;
+      background-color: #fff;
+      border: 1px solid black;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 1rem;
+      width: 100%;
+      transition: background-color 0.3s;
+    }
+
+    .practice-card-content .practice-btn:hover {
+      background-color: #333;
+      color: white;
+    }
+
+    /* --- Pagination Controls --- */
+    .pagination-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: auto; /* Pushes the controls to the bottom of the flex container */
+      padding: 2rem 1rem 1rem 1rem; /* Added padding for spacing */
+      flex-shrink: 0;
+    }
+
+    .pagination-btn {
+      cursor: pointer;
+      background-color: #fff;
+      color: #000;
+      border: 1px solid #ccc;
+      border-radius: 50%; /* Makes the button circular */
+      font-weight: bold;
+      font-size: 1.2rem;
+      width: 36px; /* Fixed width */
+      height: 36px; /* Fixed height */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .pagination-btn:hover:not(:disabled) {
+      background-color: #f0f0f0;
+    }
+
+    .pagination-btn:disabled {
+      cursor: not-allowed;
+      color: #aaa;
+    }
+
+    .page-indicator {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+      padding: 0 0.5rem;
+    }

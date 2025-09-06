@@ -1,0 +1,102 @@
+.footer {
+  background-color: #000;
+  color: #ddd;
+  padding: 4rem 1rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.logo-img {
+  width: 160px;
+  margin-bottom: 0.5rem;
+}
+
+.footer-section h4 {
+  color: white;
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+}
+
+/* ✅ Bullet list styled white */
+.footer-section ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  margin: 0;
+  color: #fff;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+/* ✅ Link behavior */
+.footer-section a {
+  color: #fff;                 /* white by default */
+  text-decoration: none;       /* no underline initially */
+  transition: all 0.2s ease;
+}
+
+.footer-section a:hover {
+  color: #fff;                 /* keep white */
+  text-decoration: underline;  /* only underline on hover */
+}
+
+.footer-info p {
+  margin: 0.2rem 0;
+}
+
+.footer-info .small-text {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* 📱 Mobile responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0;
+  }
+
+  .footer-section {
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+
+  .footer-section ul {
+    list-style: none; /* Remove bullets on small screens */
+    padding-left: 0;
+  }
+
+  .footer-section ul li {
+    margin: 0.25rem 0;
+  }
+
+  .logo-img {
+    width: 140px;
+  }
+
+  .footer {
+    padding: 1.2rem 1rem;
+  }
+
+  .footer-info p {
+    margin: 0.1rem 0;
+  }
+}

@@ -1,0 +1,420 @@
+/* --- Full-page Container --- */
+.practice-result-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f9fafb;
+  padding: 0;
+  margin: 0;
+}
+
+/* --- Card (wrapper for body) --- */
+.practice-result-card {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  max-width: 1200px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* --- Main Content Body --- */
+.practice-result-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+/* --- Left Container --- */
+.practice-result-left {
+  flex: 1;
+  min-width: 300px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.practice-result-left h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* --- Stats Grid --- */
+.practice-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 100%;
+  flex: 1;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+/* --- Stat Item with Box Shadow and Design --- */
+.practice-stat-item {
+  background: white;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 180px;
+}
+
+.practice-stat-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.practice-stat-item .practice-stat-label {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 0.4rem;
+  display: block;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.practice-stat-item .practice-stat-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.2;
+}
+
+/* --- Right Container --- */
+.practice-result-right {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.practice-image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.practice-result-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  width: auto;
+  height: auto;
+}
+
+/* --- Centered (No Data) Card --- */
+.practice-result-card-centered {
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* --- Home Button --- */
+.practice-home-button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 1rem;
+}
+
+.practice-home-button:hover {
+  background-color: #2563eb;
+}
+
+/* --- Responsive Layout --- */
+
+/* Large Desktop / Laptop Screens */
+@media (min-width: 1200px) {
+  .practice-result-body {
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  
+  .practice-result-left {
+    padding: 1.5rem;
+  }
+  
+  .practice-result-right {
+    padding: 1.5rem;
+  }
+  
+  .practice-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .practice-stat-item {
+    padding: 1rem;
+    max-width: 190px;
+  }
+  
+  .practice-stat-item .practice-stat-value {
+    font-size: 1.2rem;
+  }
+}
+
+/* Standard Desktop / Laptop */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .practice-result-body {
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  
+  .practice-result-left {
+    padding: 1.5rem;
+  }
+  
+  .practice-result-right {
+    padding: 1.5rem;
+  }
+  
+  .practice-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .practice-stat-item {
+    padding: 0.9rem;
+    max-width: 170px;
+  }
+  
+  .practice-stat-item .practice-stat-value {
+    font-size: 1.1rem;
+  }
+}
+
+/* Tablet Screens */
+@media (min-width: 768px) and (max-width: 991px) {
+  .practice-result-body {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+  
+  .practice-result-left {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    height: auto;
+  }
+  
+  .practice-result-right {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    height: auto;
+    margin-top: 0;
+  }
+  
+  .practice-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    align-content: center;
+  }
+  
+  .practice-stat-item {
+    padding: 0.7rem;
+    min-height: 55px;
+    max-width: 160px;
+  }
+  
+  .practice-stat-item .practice-stat-value {
+    font-size: 1rem;
+  }
+  
+  .practice-image-container {
+    max-height: 300px;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 767px) {
+  .practice-result-body {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .practice-result-left {
+    padding: 0;
+    height: auto;
+  }
+  
+  .practice-result-right {
+    padding: 0;
+    height: auto;
+    margin-top: 0;
+  }
+  
+  .practice-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    align-content: center;
+  }
+  
+  .practice-stat-item {
+    padding: 0.6rem;
+    min-height: 50px;
+    max-width: 150px;
+  }
+  
+  .practice-stat-item .practice-stat-label {
+    font-size: 0.75rem;
+  }
+  
+  .practice-stat-item .practice-stat-value {
+    font-size: 0.95rem;
+  }
+  
+  .practice-result-left h1 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+  
+  .practice-home-button {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+  }
+  
+  .practice-image-container {
+    max-height: 250px;
+  }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 575px) {
+  .practice-result-body {
+    padding: 0.75rem;
+    gap: 1.25rem;
+  }
+  
+  .practice-result-left h1 {
+    font-size: 1.2rem;
+  }
+  
+  .practice-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+    max-width: 100%;
+  }
+  
+  .practice-stat-item {
+    padding: 0.5rem;
+    min-height: 45px;
+    max-width: 140px;
+  }
+  
+  .practice-stat-item .practice-stat-label {
+    font-size: 0.7rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .practice-stat-item .practice-stat-value {
+    font-size: 0.85rem;
+  }
+  
+  .practice-result-image {
+    max-height: 200px;
+  }
+  
+  .practice-home-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    width: 100%;
+    max-width: 180px;
+  }
+  
+  .practice-result-card-centered {
+    padding: 0.75rem;
+  }
+  
+  .practice-result-card-centered h1 {
+    font-size: 1.1rem;
+  }
+  
+  .practice-result-card-centered p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra Small Mobile Screens */
+@media (max-width: 400px) {
+  .practice-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .practice-stat-item {
+    padding: 0.4rem;
+    min-height: 40px;
+    max-width: 130px;
+  }
+  
+  .practice-stat-item .practice-stat-label {
+    font-size: 0.65rem;
+  }
+  
+  .practice-stat-item .practice-stat-value {
+    font-size: 0.8rem;
+  }
+  
+  .practice-result-image {
+    max-height: 180px;
+  }
+}

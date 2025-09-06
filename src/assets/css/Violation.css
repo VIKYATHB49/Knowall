@@ -1,0 +1,48 @@
+.violation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.violation-container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  text-align: center;
+  width: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.violation-info-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.violation-message {
+  font-size: 18px;
+  margin-bottom: 20px;
+  white-space: nowrap; /* Keep text on the same line */
+}
+
+.violation-ok-btn {
+  padding: 8px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.violation-ok-btn:hover {
+  background-color: #0056b3;
+}

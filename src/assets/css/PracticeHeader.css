@@ -1,0 +1,31 @@
+/* --- Header --- */
+.practice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  padding: 10px 2rem;
+}
+
+/* Section Name (Left side) */
+.section-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+/* Stopwatch (Center) */
+.stopwatch {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #334155;
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+.flex-placeholder {
+  width: 15%;
+}

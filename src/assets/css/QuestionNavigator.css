@@ -1,0 +1,274 @@
+/* Main Container with padding */
+.question-navigator-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Navigation Panel Content */
+.question-navigator-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header Styles */
+.navigator-header {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.test-name {
+  font-size: 18px;
+  margin: 0 0 5px 0;
+  color: #333;
+  font-weight: 600;
+}
+
+.section-name {
+  font-size: 14px;
+  margin: 0;
+  color: #666;
+}
+
+/* Questions Grid Container */
+.question-grid-container {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+/* Questions Grid */
+.question-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  gap: 10px;
+  padding-right: 5px; /* Prevent scrollbar overlap */
+}
+
+.question-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.question-btn:hover {
+  background: #f0f0f0;
+}
+
+.question-btn.active {
+  border: none;
+  background: grey;
+  color: white;
+}
+
+.question-btn.answered {
+  background: #4caf50;
+  border: none;
+  color: white;
+}
+
+/* Fixed Submit Section Button */
+.submit-section {
+  background: #fff;
+  border-top: 1px solid #eee;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+.submit-section .submit-btn {
+  width: 100%;
+  padding: 10px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+  font-size: medium;
+}
+
+.submit-btn:hover {
+  background: #388e3c;
+}
+
+/* Scrollbar styling */
+.question-grid-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.question-grid-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.question-grid-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+/* Tablet Styles (768px and above) */
+@media (min-width: 768px) {
+  .question-navigator-container {
+    padding: 12px;
+  }
+  
+  .navigator-header {
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+  }
+  
+  .test-name {
+    font-size: 20px;
+  }
+  
+  .section-name {
+    font-size: 15px;
+  }
+  
+  .question-grid {
+    grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
+    gap: 12px;
+  }
+  
+  .question-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 15px;
+  }
+  
+  .submit-section .submit-btn {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+/* Mobile Styles (below 768px) */
+@media (max-width: 767px) {
+  .question-navigator-container {
+    padding: 8px;
+    height: 100%;
+  }
+  
+  .navigator-header {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+  }
+  
+  .test-name {
+    font-size: 16px;
+  }
+  
+  .section-name {
+    font-size: 13px;
+  }
+  
+  .question-grid-container {
+    margin-bottom: 8px;
+  }
+  
+  .question-grid {
+    grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
+    gap: 8px;
+  }
+  
+  .question-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 13px;
+  }
+  
+  .submit-section .submit-btn {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile Styles (below 500px) */
+@media (max-width: 499px) {
+  .question-navigator-container {
+    padding: 6px;
+  }
+  
+  .navigator-header {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .test-name {
+    font-size: 14px;
+  }
+  
+  .section-name {
+    font-size: 12px;
+  }
+  
+  .question-grid {
+    grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+    gap: 6px;
+  }
+  
+  .question-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+  
+  .submit-section .submit-btn {
+    padding: 6px;
+    font-size: 13px;
+  }
+}
+
+/* Large Screen Styles (1200px and above) */
+@media (min-width: 1200px) {
+  .question-navigator-container {
+    padding: 15px;
+  }
+  
+  .navigator-header {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .test-name {
+    font-size: 22px;
+  }
+  
+  .section-name {
+    font-size: 16px;
+  }
+  
+  .question-grid {
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 15px;
+  }
+  
+  .question-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+  }
+  
+  .submit-section .submit-btn {
+    padding: 15px;
+    font-size: 17px;
+  }
+}

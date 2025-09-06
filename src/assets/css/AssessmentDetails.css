@@ -1,0 +1,246 @@
+.details-container {
+  padding: 2rem;
+  max-width: 900px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+
+.details-error-info p {
+    margin: 4px 0; 
+    line-height: 1.5;
+}
+
+.details-type {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 2rem auto;
+  background: transparent;
+  color: rgb(45, 47, 54);
+  border: 1px solid #e0e0e0;
+  padding: 8px 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.details-buttons-row-align-left {
+  display: flex;
+  gap: 0;
+  justify-content: flex-start;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.details-btn {
+  background-color: transparent;
+  color: #555;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 12px 18px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: -1px;
+}
+
+.details-btn.active {
+  color: #4A90E2;
+  border-bottom: 3px solid #4A90E2;
+}
+
+.details-btn:not(.active):hover {
+  background-color: #f7f7f7;
+}
+
+.details-table-container {
+  overflow-x: auto;
+}
+
+.details-table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #ffffff;
+  font-size: 0.95rem;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+.details-top-row {
+  background-color: #2d3242;
+  color: white;
+}
+
+.details-table th,
+.details-table td {
+  border: 1px solid #e0e0e0;
+  padding: 12px;
+}
+
+.details-negative-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.details-duration-section {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.details-duration-table {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  margin: 0 auto 24px auto;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.details-duration-label {
+  background-color: #6c757d;
+  color: white;
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.details-duration-time {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  background-color: #f8f9fa;
+}
+
+.Noprevious {
+  text-align: center;
+  margin: 16px auto;
+  border: none;
+  border-radius: 8px;
+  max-width: 500px;
+}
+.Noprevious p span {
+  color: #2F4DE0;
+}
+
+.details-error-info {
+  text-align: center;
+  padding: 16px;
+  margin: 16px auto;
+  border: 1px solid #f5c6cb;
+  background-color: #f8d7da;
+  color: #721c24;
+  border-radius: 8px;
+  max-width: 500px;
+}
+
+.details-info {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+
+}
+
+.details-info span {
+  margin: 5px;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  background-color: #2F4DE0;
+  color: #ffffff;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.Noprevious p {
+  margin: 4px 0;
+  font-size: 1.1rem;
+}
+
+.no-attempts-img {
+  max-width: 300px;
+  height: auto;
+}
+
+.details-start-btn {
+  margin-top: 16px;
+  font-size: 1rem;
+  border: none;
+  background-color: #2d3242;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.details-start-btn:hover {
+  background-color: #41485e;
+}
+
+.previous-attempts-container {
+  padding-top: 1rem;
+}
+
+.attempt-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 300px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 16px;
+}
+
+.attempt-card p {
+  margin: 0 0 12px 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.attempt-card p b {
+  color: #555;
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.details-view-results-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.details-view-results-btn:hover {
+  background-color: #f7f7f7;
+}
+
+@media (max-width: 768px) {
+  .details-table th, 
+  .details-table td {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+
+  .details-start-btn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  .details-duration-label, 
+  .details-duration-time {
+    font-size: 0.8rem;
+  }
+}

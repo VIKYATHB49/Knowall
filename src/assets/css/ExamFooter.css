@@ -1,0 +1,115 @@
+.ExamFooter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px 12px; /* Consistent padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 1000;
+  background: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.ExamFooter.shrink {
+  width: 70%;
+  left: 0;
+}
+
+.ExamFooter-btn-outline {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 12px; /* Consistent padding */
+  font-size: 13px; /* Consistent font size */
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  min-width: 100px; /* Consistent min-width */
+}
+
+.ExamFooter-btn-outline:hover {
+  background-color: #d32f2f;
+}
+
+.ExamFooter-btn-primary {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 12px; /* Consistent padding */
+  font-size: 13px; /* Consistent font size */
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  min-width: 100px; /* Consistent min-width */
+}
+
+.ExamFooter-btn-primary:hover {
+  background-color: #388e3c;
+}
+
+.ExamFooter-left,
+.ExamFooter-right {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+/* Tablet Styles (501px - 768px) */
+@media (min-width: 501px) and (max-width: 768px) {
+  .ExamFooter {
+    padding: 10px 15px;
+  }
+  
+  .ExamFooter-btn-outline,
+  .ExamFooter-btn-primary {
+    padding: 10px 16px;
+    font-size: 14px;
+    min-width: 120px;
+  }
+  
+  .ExamFooter.shrink {
+    width: 70%;
+  }
+}
+
+/* Mobile Small Styles (500px and below) */
+@media (max-width: 500px) {
+  .ExamFooter {
+    padding: 6px 10px;
+  }
+  
+  .ExamFooter-btn-outline,
+  .ExamFooter-btn-primary {
+    padding: 6px 10px;
+    font-size: 12px;
+    min-width: 80px;
+  }
+  
+  .ExamFooter.shrink {
+    width: 100%;
+    left: 0;
+  }
+}
+
+/* Laptop/Desktop Styles (769px and above) */
+@media (min-width: 769px) {
+  .ExamFooter {
+    padding: 12px 25px;
+  }
+  
+  .ExamFooter-btn-outline,
+  .ExamFooter-btn-primary {
+    padding: 12px 20px;
+    font-size: 15px;
+    min-width: 140px;
+  }
+  
+  .ExamFooter.shrink {
+    width: 70%;
+  }
+}

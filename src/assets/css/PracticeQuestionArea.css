@@ -1,0 +1,192 @@
+.practice-question-area {
+  background-color: #ffffff;
+  width: 100%;
+  padding-left: 2rem; 
+  padding-right: 2rem;
+  padding-bottom: 5rem;
+  border-radius: 1rem; 
+}
+.question-counter {
+  font-size: 0.875rem;
+  font-weight: 600; 
+  color: #64748b; 
+  margin-bottom: 1rem;
+}
+
+.question-text {
+  font-size: 1.25rem; 
+  font-weight: 700; 
+  color: #1e293b; 
+  margin-bottom: 1.5rem; 
+  line-height: 1.25;
+}
+
+/* --- Question Image --- */
+.question-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem; 
+  border: 1px solid #e2e8f0; 
+  margin-bottom: 1.5rem; 
+}
+
+/* --- Options Container --- */
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 50%;
+}
+
+/* --- Individual Option Styling --- */
+.option-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem; 
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem; 
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: #334155; 
+  font-weight: 500; 
+}
+
+.option-item .option-radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem; 
+  height: 1.5rem; 
+  margin-right: 1rem; 
+  border: 2px solid #cbd5e1; 
+  border-radius: 9999px; 
+  flex-shrink: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.option-item .option-radio .inner-dot {
+  width: 0.75rem; 
+  height: 0.75rem; 
+  border-radius: 9999px; 
+}
+
+.option-item:hover {
+  border-color: #3b82f6;
+  background-color: #eff6ff; 
+}
+
+/* --- Option States (Selected, Correct, Incorrect) --- */
+
+/* State: Selected (before answering) */
+.option-item.selected {
+  background-color: #eff6ff; 
+  border-color: #3b82f6; 
+  box-shadow: 0 0 0 2px #bfdbfe; 
+}
+
+.option-item.selected .option-radio {
+  border-color: #3b82f6;
+}
+
+.option-item.selected .inner-dot {
+  background-color: #3b82f6;
+}
+
+/* State: Correct (after answering) */
+.option-item.correct {
+  background-color: #f0fdf4; 
+  border-color: #22c55e; 
+  color: #14532d; 
+  font-weight: 700; 
+}
+
+.option-item.correct .option-radio {
+  border-color: #22c55e;
+}
+
+.option-item.correct.selected .inner-dot {
+  background-color: #22c55e;
+}
+
+/* State: Incorrect (after answering) */
+.option-item.incorrect {
+  background-color: #fee2e2;
+  border-color: #ef4444; 
+  color: #7f1d1d;
+  font-weight: 700; 
+}
+
+.option-item.incorrect .option-radio {
+  border-color: #ef4444;
+}
+
+.option-item.incorrect.selected .inner-dot {
+  background-color: #ef4444;
+}
+
+/* State: Disabled/Unselected (after answering) */
+.option-item.disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background-color: #f8fafc;
+}
+
+/* --- Explanation Area --- */
+.explanation-area {
+  margin-top: 2rem; 
+  padding: 1.25rem; 
+  background-color: rgba(248, 250, 252, 0.7); 
+  border-left: 4px solid #60a5fa; 
+  border-radius: 0 0.5rem 0.5rem 0; 
+}
+
+.explanation-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem; 
+  font-weight: 600; 
+  color: #1e293b; 
+  margin: 0 0 0.5rem 0; 
+}
+
+.explanation-title svg {
+  width: 1.25rem; 
+  height: 1.25rem; 
+  color: #3b82f6; 
+  margin-right: 0.5rem; 
+  flex-shrink: 0;
+}
+
+.explanation-text {
+  color: #475569; 
+  line-height: 1.6; 
+  padding-left: 1.75rem; 
+  margin: 0;
+}
+
+/* --- Mobile Responsive --- */
+@media (max-width: 768px) {
+  .question-text {
+    font-weight: 600; /* Reduced from 700 to 600 */
+  }
+  
+  .options-container {
+    width: 100%;
+  }
+  
+  .option-item {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .question-text {
+    font-size: 1.1rem;
+    font-weight: 600; /* Further reduced for smaller screens */
+  }
+  
+  .option-item {
+    padding: 0.5rem;
+  }
+}

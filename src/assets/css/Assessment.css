@@ -1,0 +1,202 @@
+/* All assessment-page rules now live under .content1 */
+.content1 {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Filters */
+.content1 .filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.content1 .filter-btn {
+  cursor: pointer;
+  height: 35px;
+  border-radius: 6px;
+  border: 1px solid #000;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0 15px;
+  background: #fff;
+  color: #000;
+  transition: background 0.3s, color 0.3s;
+}
+.content1 .filter-btn.active {
+  background: #000;
+  color: #fff;
+}
+
+/* Card Grid — fixed-card-width grid, centered */
+.content1 .card-container {
+  display: grid;
+  /* each card is 250px wide, wrap as needed */
+  grid-template-columns: repeat(auto-fill, 250px);
+  justify-content: center; /* center the grid in the container */
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 1rem; /* optional side padding */
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Individual Card */
+.content1 .test {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #a09f9f;
+  border-radius: 6px;
+  padding: 20px;
+  background: #fff;
+  transition: transform 0.3s;
+  box-sizing: border-box;
+  width: 250px;      /* fixed width to match grid track */
+}
+.content1 .test:hover {
+  transform: translateY(-4px);
+}
+
+/* Content Inside Card */
+.content1 .in-test {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Title & Divider */
+.content1 .in-test h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  min-height: 3rem;
+}
+.content1 .in-test hr {
+  border: none;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.4);
+  margin: 6px 0;
+}
+
+/* Top & Bottom Rows */
+.content1 .top-row,
+.content1 .bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content1 .top-row {
+  gap: 8px;
+}
+.content1 .bottom-row {
+  gap: 6px;
+}
+
+/* Tags & Badges */
+.content1 .type {
+  background: #d5d5d5;
+  color: #555;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.content1 .amount {
+  background: #dfffe0;
+  color: #2d862d;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.content1 .badge-new {
+  background: #ff3cac;
+  color: #fff;
+  padding: 3px 6px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0%,100% { transform: scale(1); opacity: 1; }
+  50%     { transform: scale(1.05); opacity: 0.8; }
+}
+
+/* Vendor & Count */
+.content1 .light-colour {
+  margin: 0;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Book Icon */
+.content1 .book {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 8px;
+}
+
+/* Open Button */
+.content1 .open {
+  margin-top: auto;
+  width: 100%;
+  height: 36px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+.content1 .open:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  /* shrink fixed card width */
+  .content1 .card-container {
+    grid-template-columns: repeat(auto-fill, 100%);
+    gap: 15px;
+    padding: 0;
+  }
+  .content1 .test {
+    width: 100%;
+  }
+}
+/* Locked Card Styling */
+.locked-card {
+  filter: grayscale(50%) brightness(95%);
+}
+
+/* Locked Button */
+.locked-btn {
+  margin-top: auto;
+  width: 100%;
+  height: 36px;
+  border: none;
+  border-radius: 6px;
+  background: #95a5a6;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: not-allowed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.lock-icon {
+  font-size: 0.9em;
+}

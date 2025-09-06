@@ -1,0 +1,148 @@
+.registration-page {
+  display: flex;
+  min-height: 100vh;
+}
+
+.fixed-image {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.fixed-image img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  object-fit: contain;
+}
+
+.registration-form-wrapper {
+  margin-left: 40%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+}
+/* General input styling - REMOVED margin-bottom */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+/* The wrapper for positioning */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* The icon - The transform calculation is now based on the correct wrapper height */
+.password-toggle-icon {
+  position: absolute;
+  padding:10px;
+  width: auto;
+  right: 0;
+  font-size: 1.5rem;
+  color: #000000;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease-in-out;
+}
+
+/* Button styles */
+.button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2F4DE0;
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+}
+
+.button:hover {
+  background-color: #263FC3;
+}
+/* Style for the login link below the register button */
+.login-link {
+  text-align: center;
+  margin-top: 15px; /* Adds space between the button and the text */
+  font-size: 0.9em;
+  color: #000000;
+}
+
+/* Optional: Style the link itself to match your theme */
+.login-link a {
+  color: #007bff; /* Example link color */
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+/* Prevent autofill yellow background */
+input:-webkit-autofill,
+select:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  -webkit-text-fill-color: #000 !important;
+  background-color: transparent !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fixed-image {
+    display: none;
+  }
+
+  .registration-form-wrapper {
+    margin-left: 0;
+    padding: 20px;
+    width: 100%;
+  }
+
+  form {
+    padding: 25px;
+    width: 100%;
+    max-width: 500px;
+  }
+}

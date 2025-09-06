@@ -1,0 +1,213 @@
+/* Container setup */
+.login-page {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Fixed image section - 30% width */
+.fixed-image {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.fixed-image img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  object-fit: contain;
+}
+
+/* Form wrapper on the right - 70% width */
+.login-form-wrapper {
+  margin-left: 30%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Login box styling */
+.login-box {
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+
+
+/* Label styling */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* The icon - The transform calculation is now based on the correct wrapper height */
+.password-toggle-icon {
+  position: absolute;
+  padding:10px;
+  width: auto;
+  right: 0;
+  font-size: 1.5rem;
+  color: #000000;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease-in-out;
+}
+
+/* Buttons */
+.signin-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 5px;
+  background-color: #2f4de0;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.signin-btn:hover {
+  background-color: #233ab0;
+}
+
+.code-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: #e0e0e0;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.code-btn:hover {
+  background-color: #c5c5c5;
+}
+
+/* OR divider */
+.or-divider {
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bold;
+  color: #666;
+}
+
+/* Sign up text */
+.signup-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.signup-text a {
+  color: #0071eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
+/* Remember me and Forgot password layout */
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+/* Checkbox + label in same line */
+.remember-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+}
+
+/* Forgot password link */
+.forgot-link {
+  text-decoration: none;
+  color: #0071eb;
+  font-weight: 500;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .fixed-image {
+    display: none;
+  }
+
+  .login-form-wrapper {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .login-box {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  .remember-forgot {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .signin-btn,
+  .code-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

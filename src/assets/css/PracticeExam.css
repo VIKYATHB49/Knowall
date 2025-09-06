@@ -1,0 +1,117 @@
+.Practice-layout {
+  display: flex;
+  position: relative;
+  height: auto;
+  overflow: hidden;
+}
+
+.Practice-main {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.Practice-nav-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 90;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.Practice-layout.Practice-nav-open .Practice-nav-backdrop {
+  opacity: 1;
+  visibility: visible;
+}
+
+.Practice-nav {
+  position: fixed;
+  top: 0;
+  right: -30vw;
+  width: 30vw;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  transition: right 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+.Practice-layout.Practice-nav-open .Practice-nav {
+  right: 0;
+}
+
+.Practice-open-navigator-btn {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 101;
+  background-color: #000000;
+  color: white;
+  border-radius: 6px 0 0 6px;
+  width: 30px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+}
+.Practice-nav-toggle-icon{
+  width: 20px;
+  height: auto;
+}
+
+.Practice-layout.Practice-nav-open .Practice-open-navigator-btn {
+  right: calc(30vw);
+}
+
+/* --- Exam Container --- */
+.Practice-exam-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* --- Exam Main --- */
+.Practice-exam-main {
+  flex: 1;
+  padding: 1rem;
+  transition: margin-right 0.3s ease;
+}
+
+.Practice-exam-main.Practice-shrink {
+  margin-right: 30%;
+}
+
+/* --- Exam Nav --- */
+.Practice-exam-nav {
+  position: absolute;
+  top: 0;
+  right: -30%;
+  width: 30%;
+  height: 100%;
+  transition: right 0.3s ease;
+  z-index: 20;
+  padding: 1rem;
+}
+
+.Practice-exam-nav.Practice-open {
+  right: 0;
+}
+
+.Practice-open-nav-btn,
+.Practice-close-nav-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,368 @@
+/* ============================
+   DASHBOARD STYLES (Scoped)
+   ============================ */
+
+/* Main Container */
+.Dashboard-container {
+    padding: 2rem;
+}
+
+/* Grid Layout */
+.Dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    grid-template-areas:
+        "welcome welcome accuracy"
+        "activity1 activity2 activity3"
+        "mcq mcq .";
+}
+
+/* Base Card Style */
+.Dashboard-card {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    position: relative;
+    overflow: hidden;
+    min-height: 180px; /* Prevent layout shift */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.Dashboard-card h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Dashboard Heading */
+.Dashboard-h2 {
+    font-size: 1.5rem;            
+    font-weight: 500;            
+    color: #ffc107;               
+    margin-bottom: 5px;
+}
+
+/* ------------------------------
+   SPECIFIC CARD STYLES
+   ------------------------------ */
+
+/* Welcome Card */
+.Dashboard-welcome-card { 
+    grid-area: welcome; 
+    background: linear-gradient(90deg, #001f4d, #004d99, #0099ff); 
+    color: #ffffff; 
+}
+
+/* Overall Accuracy Card */
+.Dashboard-overall-accuracy-card { 
+    grid-area: accuracy; 
+    background: linear-gradient(90deg, #001f4d, #004d99, #0099ff);
+    color: #ffffff;
+}
+
+.Dashboard-card-header-split {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.Dashboard-overall-accuracy-card .Dashboard-card-header-split h3 {
+    border-bottom: none;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.Dashboard-overall-accuracy-card .Dashboard-accuracy-display { 
+    font-size: 2.5rem; 
+    font-weight: bold; 
+    margin: 0; 
+}
+.Dashboard-overall-accuracy-card .Dashboard-accuracy-display span { color: #ffffff; }
+
+/* Activity Cards Grid Placement */
+.Dashboard-grid .Dashboard-activity-card:nth-of-type(3) { grid-area: activity1; }
+.Dashboard-grid .Dashboard-activity-card:nth-of-type(4) { grid-area: activity2; }
+.Dashboard-grid .Dashboard-activity-card:nth-of-type(5) { grid-area: activity3; }
+
+.Dashboard-activity-card {
+    background-color: #f8f9fa;
+}
+.Dashboard-activity-card p { 
+    margin: 8px 0; 
+    font-size: 0.95rem; 
+    position: relative; 
+    z-index: 2; 
+}
+.Dashboard-card-link { 
+    display: inline-block; 
+    margin-top: 16px; 
+    color: #007bff; 
+    text-decoration: none; 
+    font-weight: 600; 
+    position: relative; 
+    z-index: 2;
+}
+
+/* Subject Accuracy Card */
+.Dashboard-subject-accuracy-card { grid-area: mcq; }
+
+/* ------------------------------
+   DECORATIVE BACKGROUND SHAPES
+   ------------------------------ */
+.Dashboard-welcome-card::before, 
+.Dashboard-welcome-card::after,
+.Dashboard-overall-accuracy-card::before, 
+.Dashboard-overall-accuracy-card::after,
+.Dashboard-subject-accuracy-card::before, 
+.Dashboard-subject-accuracy-card::after,
+.Dashboard-activity-card::before, 
+.Dashboard-activity-card::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.15); 
+    z-index: 1;
+}
+
+/* Shape Positions */
+.Dashboard-welcome-card::before { width: 150px; height: 150px; border-radius: 50%; top: -50px; left: -50px; }
+.Dashboard-welcome-card::after { width: 200px; height: 200px; border-radius: 20px; bottom: -80px; right: -80px; transform: rotate(30deg); }
+
+.Dashboard-overall-accuracy-card::before { width: 100px; height: 100px; border-radius: 50%; bottom: -40px; left: -40px; transform: rotate(-15deg); }
+.Dashboard-overall-accuracy-card::after { width: 80px; height: 80px; border-radius: 10px; top: -20px; right: -20px; transform: rotate(55deg); }
+
+.Dashboard-activity-card::before, 
+.Dashboard-activity-card::after {
+    background-color: rgba(0, 123, 255, 0.15); 
+}
+.Dashboard-grid .Dashboard-activity-card:nth-of-type(3)::before { width: 80px; height: 80px; border-radius: 50%; top: -30px; right: -30px; }
+.Dashboard-grid .Dashboard-activity-card:nth-of-type(4)::before { width: 100px; height: 100px; border-radius: 10px; bottom: -50px; left: -25px; transform: rotate(20deg); }
+.Dashboard-grid .Dashboard-activity-card:nth-of-type(5)::before { width: 90px; height: 90px; border-radius: 50%; bottom: -45px; right: -45px; }
+
+.Dashboard-subject-accuracy-card::before, 
+.Dashboard-subject-accuracy-card::after {
+    background-color: rgba(0, 123, 255, 0.15);
+}
+.Dashboard-subject-accuracy-card::before { width: 120px; height: 120px; border-radius: 50%; top: 50%; left: -60px; margin-top: -60px; }
+.Dashboard-subject-accuracy-card::after { width: 180px; height: 180px; border-radius: 25px; bottom: -90px; right: -90px; transform: rotate(-25deg); }
+
+/* ------------------------------
+   PROGRESS BAR
+   ------------------------------ */
+@keyframes Dashboard-moveStripes { 
+    from { background-position: 0 0; } 
+    to { background-position: 40px 0; } 
+}
+
+.Dashboard-progress-bar-container {
+    height: 15px; 
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 0px;
+    overflow: hidden;
+}
+.Dashboard-progress-bar-filler { 
+    height: 100%; 
+    border-radius: inherit; 
+    transition: width 0.4s ease-in-out; 
+    background-size: 40px 40px; 
+    animation: Dashboard-moveStripes 1s linear infinite; 
+}
+.Dashboard-progress-bar-filler.green { 
+    background-image: repeating-linear-gradient(45deg, #28a745, #28a745 10px, #2dc44d 10px, #2dc44d 20px); 
+}
+.Dashboard-progress-bar-filler.yellow { 
+    background-image: repeating-linear-gradient(45deg, #ffc107, #ffc107 10px, #ffd03a 10px, #ffd03a 20px); 
+}
+.Dashboard-progress-bar-filler.red { 
+    background-image: repeating-linear-gradient(45deg, #dc3545, #dc3545 10px, #e94b59 10px, #e94b59 20px); 
+}
+
+/* ------------------------------
+   HEADER + PAGINATION
+   ------------------------------ */
+.Dashboard-card-header-flex { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border-bottom: 1px solid #eee; 
+    margin-bottom: 16px; 
+}
+.Dashboard-card-header-flex h3 { border: none; margin: 0; padding: 0 0 12px 0; }
+
+.Dashboard-pagination-controls { 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    position: relative; 
+    z-index: 2;
+}
+.Dashboard-pagination-controls button { 
+    background: #f0f0f0; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+    width: 28px; 
+    height: 28px; 
+    cursor: pointer; 
+    font-size: 1.2rem; 
+    line-height: 1; 
+}
+.Dashboard-pagination-controls button:disabled { 
+    background: #fafafa; 
+    color: #ccc; 
+    cursor: not-allowed; 
+}
+.Dashboard-pagination-controls span { 
+    font-size: 0.9rem; 
+    font-weight: 500; 
+    color: #555; 
+}
+
+/* ------------------------------
+   BUTTONS
+   ------------------------------ */
+.Dashboard-button-group { 
+    margin-top: 20px; 
+    position: relative; 
+    z-index: 2; 
+}
+.Dashboard-btn { 
+    border: none; 
+    padding: 8px 16px; 
+    border-radius: 5px; 
+    color: white; 
+    cursor: pointer; 
+    font-size: 0.8rem; 
+    margin-right: 10px; 
+}
+.Dashboard-btn-report { background-color: #17a2b8; }
+.Dashboard-btn-change-password { background-color: #ff9f43; }
+
+/* ------------------------------
+   SUBJECT ROWS
+   ------------------------------ */
+.Dashboard-scrollable-content { min-height: 180px; }
+.Dashboard-subject-row { 
+    display: flex; 
+    align-items: center; 
+    gap: 16px; 
+    padding: 8px 4px; 
+    position: relative; 
+    z-index: 2;
+}
+.Dashboard-subject-name { flex-basis: 30%; font-weight: 500; color: #007bff; }
+.Dashboard-subject-progress { flex-grow: 1; }
+.Dashboard-subject-percentage { font-weight: bold; }
+
+/* ------------------------------
+   ERROR / LOADING
+   ------------------------------ */
+.Dashboard-loading-spinner, 
+.Dashboard-error-message { 
+    text-align: center; 
+    padding: 50px; 
+    font-size: 1.2rem; 
+}
+.Dashboard-error-message { color: #d63031; }
+
+/* ------------------------------
+   SKELETON SHIMMER
+   ------------------------------ */
+.Dashboard-skeleton {
+  background: linear-gradient(90deg, #e0e0e0 25%, #f4f4f4 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: Dashboard-shimmer 1.5s infinite;
+  margin: 6px 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+@keyframes Dashboard-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ------------------------------
+   RESPONSIVE ADJUSTMENTS
+   ------------------------------ */
+@media (max-width: 1024px) {
+  .Dashboard-grid { 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-areas: 
+      "welcome welcome" 
+      "accuracy accuracy" 
+      "activity1 activity2" 
+      "activity3 ." 
+      "mcq mcq"; 
+  }
+  .Dashboard-overall-accuracy-card { width: 100%; justify-self: auto; }
+}
+
+@media (max-width: 768px) {
+  .Dashboard-grid { 
+    grid-template-columns: 1fr; 
+    grid-template-areas: 
+      "welcome" 
+      "accuracy" 
+      "activity1" 
+      "activity2" 
+      "activity3" 
+      "mcq"; 
+  }
+
+  /* Specific adjustments for smaller screens */
+  .Dashboard-welcome-card .Dashboard-h2 {
+    font-size: 1.3rem; /* Slightly smaller font for welcome heading */
+  }
+
+  .Dashboard-user-detail {
+    font-size: 0.9rem; /* Adjust email font size */
+    word-wrap: break-word; /* Allow email to break to the next line */
+  }
+
+  .Dashboard-user-detail span {
+    display: block; /* Force email content onto a new line */
+  }
+
+  .Dashboard-button-group {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Add space between stacked buttons */
+    margin-top: 15px; /* Adjust top margin for button group */
+  }
+
+  .Dashboard-btn {
+    width: 100%; /* Make buttons full width */
+    margin-right: 0; /* Remove right margin when stacked */
+  }
+}
+
+/* New media query for very small screens */
+@media (max-width: 415px) {
+  .Dashboard-container {
+    padding: 1rem; /* Reduce padding on container */
+  }
+
+  .Dashboard-card {
+    padding: 16px; /* Reduce card padding */
+  }
+
+  .Dashboard-h2 {
+    font-size: 1.2rem; /* Further reduce welcome heading size */
+  }
+
+  .Dashboard-overall-accuracy-card .Dashboard-accuracy-display { 
+    font-size: 2rem; /* Reduce overall percentage font size */
+  }
+
+  .Dashboard-user-detail,
+  .Dashboard-user-info p {
+    font-size: 0.85rem; /* Smaller font for user details */
+  }
+}

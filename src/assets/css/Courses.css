@@ -1,0 +1,141 @@
+/* General page styling */
+.courses-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.courses-main-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.courses-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+/* --- Responsive Grid --- */
+.courses-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0 0.5rem;
+}
+
+/* --- Course Card Styling --- */
+.course-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.course-card-image-wrapper {
+  width: 100%;
+  height: 180px;
+  background-color: #f9f9f9;
+}
+
+.course-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Content --- */
+.course-card-content {
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.course-card-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: #2c3e50;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.course-card-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  border-top: 1px solid #ecf0f1;
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
+
+/* --- Button --- */
+.course-card-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-top: 1rem;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.course-card-button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.course-card-button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.lock-icon {
+  font-size: 0.9em;
+}
+
+/* --- Locked Card Styling --- */
+.locked-card {
+  filter: grayscale(50%) brightness(95%);
+}
+
+/* --- Mobile Optimization --- */
+@media (max-width: 480px) {
+  .courses-main-title {
+    font-size: 1.6rem;
+  }
+  .courses-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  .course-card-content {
+    padding: 0.75rem 1rem;
+  }
+  .course-card-title {
+    font-size: 1rem;
+  }
+  .course-card-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+}

@@ -1,0 +1,231 @@
+/* Row 1 - Main Header */
+.exam-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background: #ffffff;
+  padding: 4px 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.exam-logo {
+  height: 24px;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+.timer {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.right {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.right button {
+  margin-left: 0;
+}
+
+.right .btn-outline {
+  background: transparent;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #2F4DE0;
+  border: 1px solid #2F4DE0;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+  display: none;
+}
+
+.right .btn-primary {
+  background: #4caf50;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Row 2 - Subheader */
+.exam-subheader {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 3px 12px;
+  font-size: 13px;
+}
+
+.section-info {
+  font-size: 13px;
+}
+
+.exam-section-badge {
+  background: #2F4DE0;
+  color: white;
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 0.3rem;
+  font-size: 12px;
+}
+
+.section-count {
+  font-size: 13px;
+  margin-left: auto;
+}
+
+/* Tablet Styles */
+@media (min-width: 501px) and (max-width: 768px) {
+  .exam-header {
+    padding: 5px 15px;
+  }
+
+  .exam-logo {
+    height: 28px;
+  }
+
+  .timer {
+    font-size: 1.2rem;
+  }
+
+  .right .btn-outline {
+    display: none;
+  }
+
+  .right .btn-primary {
+    font-size: 13px;
+    padding: 0.25rem 0.7rem;
+  }
+
+  .exam-subheader {
+    padding: 4px 15px;
+  }
+
+  .section-info,
+  .section-count {
+    font-size: 13px;
+  }
+
+  .exam-section-badge {
+    padding: 0.15rem 0.6rem;
+    font-size: 13px;
+  }
+}
+
+/* Mobile Small Styles (500px and below) */
+@media (max-width: 500px) {
+  .exam-header {
+    padding: 3px 10px;
+  }
+
+  .exam-logo {
+    height: 22px;
+  }
+
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+
+  .timer {
+    font-size: 1rem;
+  }
+
+  .right {
+    gap: 0.3rem;
+  }
+
+  .right .btn-outline {
+    display: none;
+  }
+
+  .right .btn-primary {
+    font-size: 11px;
+    padding: 0.15rem 0.5rem;
+  }
+
+  .exam-subheader {
+    padding: 2px 10px;
+    font-size: 12px;
+  }
+
+  .section-info,
+  .section-count {
+    font-size: 12px;
+  }
+
+  .exam-section-badge {
+    padding: 0.05rem 0.4rem;
+    font-size: 11px;
+    border-radius: 3px;
+  }
+}
+
+/* Laptop/Desktop Styles */
+@media (min-width: 769px) {
+  .exam-header {
+    padding: 6px 25px;
+  }
+
+  .exam-logo {
+    height: 40px;
+  }
+
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+
+  .timer {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .right .btn-outline {
+    display: block;
+    font-size: 15px;
+    padding: 0.3rem 1rem;
+    border-radius: 6px;
+  }
+
+  .right .btn-primary {
+    font-size: 15px;
+    padding: 0.3rem 1rem;
+    border-radius: 6px;
+  }
+
+  .exam-subheader {
+    padding: 5px 25px;
+    font-size: 16px;
+  }
+
+  .section-info,
+  .section-count {
+    font-size: 16px;
+  }
+
+  .exam-section-badge {
+    padding: 0.2rem 0.8rem;
+    font-size: 15px;
+    border-radius: 6px;
+  }
+}

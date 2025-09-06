@@ -1,0 +1,434 @@
+.exam-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 8px; /* Match ExamHeader padding */
+}
+
+.exam-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 4px 0; /* Match ExamHeader vertical padding */
+}
+
+.test-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.exam-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Consistent small gap */
+}
+
+.report-btn {
+  background-color: transparent;
+  border: 1px solid #d00;
+  color: #d00;
+  padding: 4px 8px; /* Match ExamHeader button padding */
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.marks-badges {
+  display: flex;
+  gap: 6px; /* Consistent small gap */
+}
+
+.positive-mark,
+.negative-mark {
+  padding: 4px 8px; /* Match ExamHeader padding */
+  border-radius: 4px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.positive-mark {
+  background-color: #28a745;
+}
+
+.negative-mark {
+  background-color: #dc3545;
+}
+
+.question-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Consistent gap */
+  flex: 1;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 8px 0; /* Match overall component padding */
+}
+
+.question-block::-webkit-scrollbar {
+  display: none;
+}
+
+.question-block h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.question-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 10px; /* Match footer padding */
+}
+
+.question-option-item {
+  margin-bottom: 8px;
+}
+
+.question-option-label {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Consistent gap */
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.question-option-label input[type="radio"] {
+  accent-color: #007bff;
+  cursor: pointer;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.content-image {
+  max-width: 50%;
+  float: left;
+  max-height: 200px;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  margin: 8px 0;
+}
+
+.option-with-content .content-image {
+  max-height: 120px;
+  max-width: 120px;
+  object-fit: contain;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.content-code-block {
+  border-radius: 4px;
+  padding: 12px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 0.9rem;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.option-with-content {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Consistent gap */
+}
+
+/* Essay textarea container */
+.textarea-option-container {
+  padding-bottom: 10px; /* Match footer padding */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.essay-textarea {
+  width: 100%;
+  min-height: 150px;
+  max-height: 500px;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+/* Word count label neatly aligned below */
+.word-count {
+  margin-top: 5px;
+  font-size: 0.85rem;
+  color: #555;
+  font-style: italic;
+}
+
+/* Tablet Styles (501px - 768px) */
+@media (min-width: 501px) and (max-width: 768px) {
+  .exam-content {
+    padding: 10px; /* Match ExamHeader padding */
+  }
+  
+  .exam-header-row {
+    padding: 5px 0; /* Match ExamHeader vertical padding */
+  }
+  
+  .test-name {
+    font-size: 1.4rem;
+  }
+  
+  .exam-actions {
+    gap: 10px;
+  }
+  
+  .report-btn {
+    padding: 5px 10px; /* Match ExamHeader button padding */
+    font-size: 1rem;
+  }
+  
+  .marks-badges {
+    gap: 8px;
+  }
+  
+  .positive-mark,
+  .negative-mark {
+    padding: 5px 10px; /* Match ExamHeader padding */
+    font-size: 1rem;
+  }
+  
+  .question-block {
+    gap: 12px;
+    padding: 10px 0; /* Match overall component padding */
+  }
+  
+  .question-block h4 {
+    font-size: 1.1rem;
+  }
+  
+  .question-option-item {
+    margin-bottom: 10px;
+  }
+  
+  .question-option-label {
+    gap: 10px;
+    font-size: 1rem;
+  }
+  
+  .question-option-label input[type="radio"] {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .content-image {
+    max-height: 220px;
+    margin: 10px 0;
+  }
+  
+  .option-with-content .content-image {
+    max-height: 140px;
+    max-width: 140px;
+  }
+  
+  .content-code-block {
+    padding: 14px;
+    font-size: 1rem;
+  }
+  
+  .option-with-content {
+    gap: 10px;
+  }
+  
+  .essay-textarea {
+    min-height: 180px;
+    padding: 12px;
+    font-size: 1rem;
+  }
+  
+  .word-count {
+    margin-top: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Small Styles (500px and below) */
+@media (max-width: 500px) {
+  .exam-content {
+    padding: 6px; /* Match ExamHeader padding */
+  }
+  
+  .exam-header-row {
+    padding: 3px 0; /* Match ExamHeader vertical padding */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .test-name {
+    font-size: 1.1rem;
+  }
+  
+  .exam-actions {
+    gap: 6px;
+  }
+  
+  .report-btn {
+    padding: 3px 6px; /* Match ExamHeader button padding */
+    font-size: 0.8rem;
+  }
+  
+  .marks-badges {
+    gap: 4px;
+  }
+  
+  .positive-mark,
+  .negative-mark {
+    padding: 3px 6px; /* Match ExamHeader padding */
+    font-size: 0.8rem;
+  }
+  
+  .question-block {
+    gap: 8px;
+    padding: 6px 0; /* Match overall component padding */
+  }
+  
+  .question-block h4 {
+    font-size: 0.95rem;
+  }
+  
+  .question-option-item {
+    margin-bottom: 6px;
+  }
+  
+  .question-option-label {
+    gap: 6px;
+    font-size: 0.9rem;
+  }
+  
+  .question-option-label input[type="radio"] {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .content-image {
+    max-height: 150px;
+    margin: 6px 0;
+  }
+  
+  .option-with-content .content-image {
+    max-height: 100px;
+    max-width: 100px;
+  }
+  
+  .content-code-block {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+  
+  .option-with-content {
+    gap: 6px;
+  }
+  
+  .essay-textarea {
+    min-height: 120px;
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+  
+  .word-count {
+    margin-top: 4px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Laptop/Desktop Styles (769px and above) */
+@media (min-width: 769px) {
+  .exam-content {
+    padding: 12px; /* Match ExamHeader padding */
+  }
+  
+  .exam-header-row {
+    padding: 6px 0; /* Match ExamHeader vertical padding */
+  }
+  
+  .test-name {
+    font-size: 1.5rem;
+  }
+  
+  .exam-actions {
+    gap: 12px;
+  }
+  
+  .report-btn {
+    padding: 6px 12px; /* Match ExamHeader button padding */
+    font-size: 1.1rem;
+  }
+  
+  .marks-badges {
+    gap: 10px;
+  }
+  
+  .positive-mark,
+  .negative-mark {
+    padding: 6px 12px; /* Match ExamHeader padding */
+    font-size: 1.1rem;
+  }
+  
+  .question-block {
+    gap: 15px;
+    padding: 12px 0; /* Match overall component padding */
+  }
+  
+  .question-block h4 {
+    font-size: 1.2rem;
+  }
+  
+  .question-option-item {
+    margin-bottom: 12px;
+  }
+  
+  .question-option-label {
+    gap: 12px;
+    font-size: 1.1rem;
+  }
+  
+  .question-option-label input[type="radio"] {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .content-image {
+    max-height: 250px;
+    margin: 12px 0;
+  }
+  
+  .option-with-content .content-image {
+    max-height: 160px;
+    max-width: 160px;
+  }
+  
+  .content-code-block {
+    padding: 16px;
+    font-size: 1.1rem;
+  }
+  
+  .option-with-content {
+    gap: 12px;
+  }
+  
+  .essay-textarea {
+    min-height: 200px;
+    padding: 14px;
+    font-size: 1.1rem;
+  }
+  
+  .word-count {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+}

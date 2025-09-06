@@ -1,0 +1,239 @@
+.page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #333;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  line-height: 1.7;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #0d47a1;
+}
+
+.terms h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #444;
+}
+
+.terms h4 {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #555;
+  margin-left: 20px;
+}
+
+.terms ul {
+  margin: 10px 0 20px 20px;
+  list-style: disc;
+}
+
+.terms-content {
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.highlight {
+  color: #2F4DE0;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.section p {
+  color: #333;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-left: 0;
+  margin-bottom: 15px;
+}
+
+.sub-level-list {
+  padding-left: 40px;
+  color: #333;
+  line-height: 1.8;
+  font-size: 1rem;
+  margin: 10px 0 20px 0;
+}
+
+.sub-level-list li {
+  margin-bottom: 8px;
+}
+
+.values-list {
+  padding-left: 20px;
+  color: #333;
+  line-height: 1.8;
+  font-size: 1rem;
+  margin: 10px 0 20px 0;
+}
+
+.values-list li {
+  margin-bottom: 10px;
+}
+
+.sub-section {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.sub-section h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.about-content {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+.about-section {
+  margin-bottom: 25px;
+}
+
+.about-section:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 20px 15px;
+  }
+  
+  .page-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+  
+  .section {
+    margin-bottom: 25px;
+  }
+  
+  .section h3 {
+    font-size: 18px;
+  }
+  
+  .sub-section h4 {
+    font-size: 15px;
+  }
+  
+  .sub-level-list {
+    padding-left: 30px;
+  }
+  
+  .values-list {
+    padding-left: 20px;
+  }
+  
+  .sub-section {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-container {
+    padding: 15px 10px;
+  }
+  
+  .page-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  .section h3 {
+    font-size: 17px;
+  }
+  
+  .sub-section h4 {
+    font-size: 14px;
+  }
+  
+  .sub-level-list {
+    padding-left: 25px;
+    font-size: 0.9rem;
+  }
+  
+  .values-list {
+    padding-left: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .sub-section {
+    margin-left: 10px;
+  }
+  
+  .section p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 320px) {
+  .page-container {
+    padding: 10px 5px;
+  }
+  
+  .page-title {
+    font-size: 22px;
+  }
+  
+  .sub-level-list {
+    padding-left: 20px;
+  }
+  
+  .values-list {
+    padding-left: 10px;
+  }
+  
+  .sub-section {
+    margin-left: 5px;
+  }
+}
